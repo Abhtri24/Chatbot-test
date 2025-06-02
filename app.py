@@ -5,7 +5,7 @@ import os
 
 
 load_dotenv('key.env')
-api_key = os.getenv("OPENAI_API_KEY")
+api_key = st.secrets["OPENAI_API_KEY"]
 
 if not api_key:
     st.error("API key not found. Please check your 'key.env' file.")
